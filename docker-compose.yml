@@ -1,0 +1,9 @@
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'python3_container'
+    working_dir: '/home/build/src'
+    tty: true
+    volumes:
+      - ${SRC_PATH}:/home/build/src
